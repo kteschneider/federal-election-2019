@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Created on Fri Nov 15 11:10:53 2019
 
@@ -8,26 +6,24 @@ Created on Fri Nov 15 11:10:53 2019
 
 import tweepy as tw
 from tweepy import OAuthHandler
+    
+'''
+User credentials to access twitter API
+'''
+
+access_token = 'api key'
+access_token_secret = 'secret api key'
+consumer_key = 'consumer key'
+consumer_secret = 'secret consumer key'
+
+auth = OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token, access_token_secret)
+    
+api = tw.API(auth)
 
 '''
 Functions
 '''
-
-def load_api():
-    
-    ''' 
-    Function that loads the twitter API after authorizing the user. 
-    '''
-    
-    access_token = "ENTER YOUR ACCESS TOKEN"
-    access_token_secret = "ENTER YOUR ACCESS TOKEN SECRET"
-    consumer_key = "ENTER YOUR API KEY"
-    consumer_secret = "ENTER YOUR API SECRET"
-    
-    auth = OAuthHandler(consumer_key, consumer_secret)
-    auth.set_access_token(access_token, access_token_secret)
-    
-    return tw.API(auth)
 
 def tweet_search(search_words, date_since):
    
@@ -56,7 +52,7 @@ def user_location(search_words, date_since):
     tweets = tw.Cursor(api.search,
                   q=search_words,
                   lang="en",
-                  since=date_since).items(5)
+                  since=date_since).items(20)
     
     users_locs = [[tweet.user.screen_name, tweet.user.location] for tweet in tweets]
     
@@ -73,6 +69,5 @@ date_since = "2019-11-01"
 Running the functions
 '''
 
-print(load_api())
 print(tweet_search(search_words, date_since))
 print(user_location(search_words, date_since))
