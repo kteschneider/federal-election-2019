@@ -6,4 +6,4 @@ This respository stores the project federal-election-2019 which analyzes tweets 
 
 ## About the Author
 
-This project is by Kate Schneider, an undergraduate political science student at the University of Toronto in Toronto, ON.
+This project is by Kate Schneider, an undergraduate political science student at the [University of Toronto](https://www.utoronto.ca) in Toronto, Ontario, Canada. It is being supervised by political science Professor Chris Cochrane.
