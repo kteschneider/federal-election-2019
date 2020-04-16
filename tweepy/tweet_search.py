@@ -11,10 +11,10 @@ from tweepy import OAuthHandler
 User credentials to access twitter API
 '''
 
-access_token = '1149713584349470726-Jhg4lRPDr4KhQvTptLzln95EXJbvjp'
-access_token_secret = 'kPbL8n2wqZJ467ci8F3UJfkPGSN56qqyFfu9xFq16UPnI'
-consumer_key = 'fgLl7cExe3Wi3ufYPtqCsmtse'
-consumer_secret = 'Q0wsv6CJ12gLjq9Gw3aq6eL259HWG9dOGuPe46xM4K60WIXPgR'
+access_token = 'AT'
+access_token_secret = 'ATS'
+consumer_key = 'CK'
+consumer_secret = 'CKS'
 
 auth = OAuthHandler(consumer_key, consumer_secret)
 auth.set_access_token(access_token, access_token_secret)
